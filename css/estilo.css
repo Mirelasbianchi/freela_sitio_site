@@ -398,9 +398,9 @@ footer .container p {
 .hero-carousel {
   position: relative;
   width: 100%;
-  min-height: 420px;
-  height: 60vh;
-  max-height: 600px;
+  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -419,7 +419,10 @@ footer .container p {
   z-index: 2;
 }
 .hero-carousel .hero-content {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   color: #fff;
   text-align: center;
@@ -429,6 +432,49 @@ footer .container p {
   border-radius: 0 0 24px 24px;
   max-width: 900px;
   margin: 0 auto;
+}
+
+section, .destaque-escuro, .cafe-escuro, .galeria, .acomodacoes-lista, .depoimentos-lista {
+  scroll-margin-top: 110px;
+}
+
+.depoimentos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-style: italic;
+  margin: 0;
+  padding: 1.5em 1em 1em 1.5em;
+  border-left: 3px solid #a27c4f;
+  background: #fffaf1;
+  border-radius: 8px;
+  position: relative;
+  min-height: 180px;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 220px;
+}
+blockquote span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+blockquote footer {
+  margin-top: 0.5em;
+  font-size: 1em;
+  color: #a27c4f;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 @media (max-width: 700px) {
